@@ -1,0 +1,147 @@
+//Consultas 1
+
+CREATE TABLE AÑO
+(
+	ID_AÑO  int(10),
+	N_AÑO VARCHAR(50)
+);
+
+
+//Consultas 2
+
+ALTER TABLE AÑO ADD CONSTRAINT ID_AÑO_PK PRIMARY KEY (ID_AÑO);
+
+//Consultas 3
+
+CREATE TABLE MES
+(
+	ID_MES int (10),
+	N_MES VARCHAR (50),
+	ID_AÑO int (10)
+);
+
+//Consultas 4
+ALTER TABLE MES ADD CONSTRAINT ID_MES_PK PRIMARY KEY (ID_MES);
+
+//Consultas 5
+ALTER TABLE MES ADD CONSTRAINT ID_AÑO_FK FOREIGN KEY (ID_AÑO) REFERENCES AÑO (ID_AÑO);
+
+//Consultas 6
+
+INSERT INTO año (`ID_AÑO`,`N_AÑO`) VALUES
+(1, '2014'),
+(2, '2015'),
+(3, '2016'),
+(4, '2017'),
+(5, '2018'),
+(6, '2019'),
+(7, '2020'),
+(8, '2021');
+
+//Consultas 7
+
+INSERT INTO mes (`ID_MES`, `N_MES`, `ID_AÑO`) VALUES
+
+(1, 'Enero', 1),
+(2, 'Febrero', 1),
+(3, 'Marzo', 1),
+(4, 'Abril', 1),
+(5, 'Mayo', 1),
+(6, 'Junio', 1),
+(7, 'Julio', 1),
+(8, 'Agosto', 1),
+(9, 'Septiembre', 1),
+(10, 'Octubre', 1),
+(11, 'Noviembre', 1),
+(12, 'Diciembre', 1),
+
+(13, 'Enero', 2),
+(14, 'Febrero', 2),
+(15, 'Marzo', 2),
+(16, 'Abril', 2),
+(17, 'Mayo', 2),
+(18, 'Junio', 2),
+(19, 'Julio', 2),
+(20, 'Agosto', 2),
+(21, 'Septiembre', 2),
+(22, 'Octubre', 2),
+(23, 'Noviembre', 2),
+(24, 'Diciembre', 2),
+
+(25, 'Enero', 3),
+(26, 'Febrero', 3),
+(27, 'Marzo', 3),
+(28, 'Abril', 3),
+(29, 'Mayo', 3),
+(30, 'Junio', 3),
+(31, 'Julio', 3),
+(32, 'Agosto', 3),
+(33, 'Septiembre', 3),
+(34, 'Octubre', 3),
+(35, 'Noviembre', 3),
+(36, 'Diciembre', 3),
+
+(37, 'Enero', 4),
+(38, 'Febrero', 4),
+(39, 'Marzo', 4),
+(40, 'Abril', 4),
+(41, 'Mayo', 4),
+(42, 'Junio', 4),
+(43, 'Julio', 4),
+(44, 'Agosto', 4),
+(45, 'Septiembre', 4),
+(46, 'Octubre', 4),
+(47, 'Noviembre', 4),
+(48, 'Diciembre', 4),
+
+(49, 'Enero', 5),
+(50, 'Febrero', 5),
+(51, 'Marzo', 5),
+(52, 'Abril', 5),
+(53, 'Mayo', 5),
+(54, 'Junio', 5),
+(55, 'Julio', 5),
+(56, 'Agosto', 5),
+(57, 'Septiembre', 5),
+(58, 'Octubre', 5),
+(59, 'Noviembre', 5),
+(60, 'Diciembre', 5),
+
+(61, 'Enero', 6),
+(62, 'Febrero', 6),
+(63, 'Marzo', 6),
+(64, 'Abril', 6),
+(65, 'Mayo', 6),
+(66, 'Junio', 6),
+(67, 'Julio', 6),
+(68, 'Agosto', 6),
+(69, 'Septiembre', 6),
+(70, 'Octubre', 6),
+(71, 'Noviembre', 6),
+(72, 'Diciembre', 6),
+
+(73, 'Enero', 7),
+(74, 'Febrero', 7),
+(75, 'Marzo', 7),
+(76, 'Abril', 7),
+(77, 'Mayo', 7),
+(78, 'Junio', 7),
+(79, 'Julio', 7),
+(80, 'Agosto', 7),
+(81, 'Septiembre', 7),
+(82, 'Octubre', 7),
+(83, 'Noviembre', 7),
+(84, 'Diciembre', 7),
+
+(85, 'Enero', 8),
+(86, 'Febrero', 8),
+(87, 'Marzo', 8),
+(88, 'Abril', 8),
+(89, 'Mayo', 8),
+(90, 'Junio', 8),
+(91, 'Julio', 8),
+(92, 'Agosto', 8),
+(93, 'Septiembre', 8),
+(94, 'Octubre', 8),
+(95, 'Noviembre', 8),
+(96, 'Diciembre', 8);

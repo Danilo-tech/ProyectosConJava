@@ -1,0 +1,40 @@
+crear base de datos y dentro ----
+
+CREATE TABLE PAIS
+(
+	ID_PAIS  int(10),
+	NOMBRE VARCHAR(60)
+);
+
+ALTER TABLE PAIS ADD CONSTRAINT ID_PAIS_PK PRIMARY KEY (ID_PAIS);
+
+CREATE TABLE CIUDAD
+(
+	ID_CIUDAD int (10),
+	NOMBRE VARCHAR (60),
+	ID_PAIS int (10)
+);
+
+//esto se crea en la tabla de ciudad
+ALTER TABLE CIUDAD ADD CONSTRAINT ID_CIUDAD_PK PRIMARY KEY (ID_CIUDAD);
+ALTER TABLE CIUDAD ADD CONSTRAINT ID_PAIS_FK FOREIGN KEY (ID_PAIS) REFERENCES PAIS (ID_PAIS);
+
+
+//esto se usa para agregar los adatos en las tablas
+
+INSERT INTO pais (`ID_PAIS`,`NOMBRE`) VALUES
+(1, 'Ecuador'),
+(2, 'Peru'),
+(3, 'Colombia');
+
+INSERT INTO ciudad (`ID_CIUDAD`, `NOMBRE`, `ID_PAIS`) VALUES
+
+(1, 'Quito', 1),
+(2, 'Guayaquil', 1),
+(3, 'Cuenca', 1),
+(4, 'Lima', 2),
+(5, 'Cuzco', 2),
+(6, 'Piura', 2),
+(7, 'Cartagena', 3),
+(8, 'Barranquilla', 3),
+(9, 'Medellin', 3);
